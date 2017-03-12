@@ -27,7 +27,7 @@ public class ObjectUtilTest {
     public void AllObj() throws IllegalAccessException {
         User user = new User(1, "cscs", 232, new Date());
         user.setRole(new Role(12,"dsds"));
-        Map<String, String> map = ObjectUtils.objectToMapString(user,"yy-MM-dd");
+        Map<String, String> map = ObjectUtils.objectToMapString("yy-MM-dd",user,"User.role");
         for (String name : map.keySet()) {
             System.out.println(name+":"+map.get(name));
         }
